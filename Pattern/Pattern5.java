@@ -1,0 +1,29 @@
+package Pattern;
+
+import java.util.Scanner;
+
+public class Pattern5 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter The Size Of row of Pattern :");
+        int n=sc.nextInt();
+        int chars_outer=65;
+        int chars_inner=65;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                if(j==1){
+                    System.out.print(Character.toChars(chars_outer));
+                    chars_inner=chars_outer+1;
+                }else{
+                    System.out.print(Character.toChars(chars_inner));
+                    chars_inner++;
+                }
+                
+            }
+            chars_outer++;
+            System.out.println();
+        }
+        sc.close();
+    }
+    
+}
